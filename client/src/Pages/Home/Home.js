@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../../Components/Home/Hero/Hero';
 import Header from '../../Components/Home/NavBar/Header';
 import NavBar from '../../Components/Home/NavBar/NavBar';
+import VendorCTA from '../../Components/Home/VendorCTA/VendorCTA';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <NavBar />
         <Hero />
       </div>
+      <VendorCTA/>
     </>
   );
 };
