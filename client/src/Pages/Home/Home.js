@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../../Components/Home/Hero/Hero';
 import Header from '../../Components/Home/NavBar/Header';
 import NavBar from '../../Components/Home/NavBar/NavBar';
+import ShopCard from '../../Components/Home/ShopCard/ShopCard';
 
 const Home = () => {
   return (
@@ -16,7 +17,9 @@ const Home = () => {
         <Header />
         <NavBar />
         <Hero />
+        
       </div>
+      <ShopCard/>
     </>
   );
 };
