@@ -42,7 +42,7 @@ const Item = ({ title, children }) => {
   
   export const Faq = () => {
     return (
-      <div class="py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl ">
+      <div class=" mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl ">
         <div class="">
           <div class="space-y-4">
             <Item title="The quick, brown fox jumps over a lazy dog?">

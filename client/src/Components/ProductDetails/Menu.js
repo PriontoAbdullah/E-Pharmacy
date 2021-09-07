@@ -10,13 +10,13 @@ const Menu = ({product:{description,totalReview}}) => {
       <div className="flex flex-wrap">
         <div className="w-full pb-5 pt-10">
           <ul
-            className="flex gap-10 md:gap-15 mb-0 list-none flex-wrap  flex-row border-b-2"
+            className="flex gap-x-4 md:gap-x-14 mb-4 list-none flex-wrap  flex-row border-b-2"
             role="tablist"
           >
             <li className="-mb-px  text-center">
               <a
                 className={
-                  "text-lg font-bold  py-3 block leading-normal " +
+                  "text-md md:text-lg font-bold   py-3 block leading-normal " +
                   (openTab === 1
                     ? "text-black border-b-2 border-cyan-500"
                     : "text-gray-600 ")
@@ -35,7 +35,7 @@ const Menu = ({product:{description,totalReview}}) => {
             <li className="-mb-px  text-center">
               <a
                 className={
-                  "text-lg font-bold   py-3 block leading-normal " +
+                  "text-md md:text-lg font-bold    py-3 block leading-normal " +
                   (openTab === 2
                     ? "text-black border-b-2 border-cyan-500"
                     : "text-gray-600 ")
@@ -48,13 +48,13 @@ const Menu = ({product:{description,totalReview}}) => {
                 href="#link2"
                 role="tablist"
               >
-                Reviews ({totalReview})
+                Reviews ({totalReview?totalReview:0})
               </a>
             </li>
             <li className="-mb-px  text-center">
               <a
                 className={
-                  "text-lg font-bold py-3 block leading-normal " +
+                  "text-md md:text-lg font-bold  py-3 block leading-normal " +
                   (openTab === 3
                     ? "text-black border-b-2 border-cyan-500"
                     : "text-gray-600 ")
@@ -73,7 +73,7 @@ const Menu = ({product:{description,totalReview}}) => {
             <li className="-mb-px  text-center">
               <a
                 className={
-                  "text-lg font-bold py-3 block leading-normal " +
+                  "text-md md:text-lg font-bold  py-3 block leading-normal " +
                   (openTab === 4
                     ? "text-black border-b-2 border-cyan-500"
                     : "text-gray-600 ")
