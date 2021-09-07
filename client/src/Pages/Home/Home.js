@@ -6,6 +6,7 @@ import Header from '../../Components/Home/NavBar/Header';
 import NavBar from '../../Components/Home/NavBar/NavBar';
 import PictureUpload from '../../Components/Home/PictureUpload/PictureUpload';
 import ShopCard from '../../Components/Home/ShopCard/ShopCard';
+import VendorCTA from '../../Components/Home/VendorCTA/VendorCTA';
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       </div>
       <ShopCard />
       <PictureUpload />
+      <VendorCTA />
       <Blog />
       <Footer />
     </>
