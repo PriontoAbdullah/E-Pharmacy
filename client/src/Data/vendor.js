@@ -132,7 +132,7 @@ const vendorData = [
     shopName: "Bergstrom, Schuster and Morar",
     logo: "http://dummyimage.com/100x100.png/cc0000/ffffff",
     banner: "http://dummyimage.com/100x100.png/dddddd/000000",
-    rating: 5,
+    rating:5,totalReview:12,
     city: "Gondanglegi Wetan",
     location: null,
     longitude: 112.6407229,
