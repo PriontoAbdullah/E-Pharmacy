@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ActionIcons = () => {
   return (
@@ -19,7 +20,8 @@ const ActionIcons = () => {
           />
         </svg>
       </li>
-      <li>
+      <Link to="/login">
+        <li>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6 font-medium cursor-pointer text-gray-700 transition-colors duration-200 hover:text-teal-accent-700"
@@ -35,6 +37,7 @@ const ActionIcons = () => {
           />
         </svg>
       </li>
+      </Link>
       <li>
         <button
           className="py-4 relative border-2 border-transparent text-gray-700 rounded-full hover:text-teal-accent-700 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
