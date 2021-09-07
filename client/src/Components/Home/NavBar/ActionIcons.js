@@ -1,6 +1,13 @@
 import React from 'react';
+import OrderCart from '../OrderCart/OrderCart';
 
 const ActionIcons = () => {
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
+
+  function openModal() {
+    setModalIsOpen(true);
+  }
+
   return (
     <>
       <li>
@@ -62,7 +69,8 @@ const ActionIcons = () => {
         </button>
       </li>
       <li>
-        <button
+        <button 
+          onClick={openModal}
           className="py-4 relative border-2 border-transparent text-gray-800 rounded-full hover:text-teal-accent-700 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
           aria-label="Cart"
         >
@@ -86,6 +94,7 @@ const ActionIcons = () => {
             </div>
           </span>
         </button>
+        <OrderCart modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}></OrderCart>
       </li>
     </>
   );
