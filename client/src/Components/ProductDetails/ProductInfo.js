@@ -1,6 +1,9 @@
 import React from "react";
+import QuantityButton from "../Common/QuantityButton";
 import ShowRating from "../Common/ShowRating";
-const ProductInfo = ({ product: { image, brand, description,totalReview } }) => {
+const ProductInfo = ({
+  product: { image, brand, description, totalReview },
+}) => {
   return (
     <div className="mx-auto flex flex-wrap justify-between">
       <img
@@ -16,7 +19,7 @@ const ProductInfo = ({ product: { image, brand, description,totalReview } }) => 
           Brand: {brand}
         </h2>
         <div className="mb-2">
-        <ShowRating value={4}/>
+          <ShowRating value={4} />
         </div>
         <p className="leading-relaxed h-20 overflow-hidden">{description}</p>
         <div className="flex mt-4 items-center pb-4 border-b-2 border-gray-100 mb-4">
@@ -24,32 +27,13 @@ const ProductInfo = ({ product: { image, brand, description,totalReview } }) => 
             $58.00
           </span>
         </div>
-        <div className="flex ml-6 items-center">
-          <span className="mr-3">Size</span>
-          <div className="relative">
-            <select
-              className={`rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2  text-base pl-3 pr-10`}
-            >
-              <option>SM</option>
-              <option>M</option>
-              <option>L</option>
-              <option>XL</option>
-            </select>
-            <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4"
-                viewBox="0 0 24 24"
-              >
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </span>
-          </div>
+        <div className="flex flex-wrap gap-3 align-center">
+          <QuantityButton />
+          <button class="main-button rounded-full mb-4">
+            <i class="fas fa-cart-plus"></i> &nbsp; Add To Cart
+          </button>
         </div>
+        <button class="hero-search-button rounded-full">Buy Now</button>
       </div>
     </div>
   );

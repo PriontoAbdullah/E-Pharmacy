@@ -3,7 +3,7 @@ import ShowRating from "./ShowRating";
 
 const ReviewTaker = () => {
   return (
-    <div className="flex flex-col  max-w-md p-8 shadow-grayOutline rounded-xl lg:p-12  dark:text-coolGray-100">
+    <div className="flex flex-col min-w-full  max-w-md p-8 shadow-grayOutline rounded-xl lg:p-12  dark:text-coolGray-100">
       <div className="flex flex-col items-center w-full">
         <h2 className="text-2xl font-semibold text-center">
           Your opinion matters!
@@ -22,7 +22,7 @@ const ReviewTaker = () => {
           ></textarea>
           <button
             type="button"
-            className="py-4 mt-4 font-semibold rounded-md text-coolGray-900 bg-teal-accent-400"
+            className="py-4 mt-4 font-semibold rounded-md inline-flex items-center justify-center text-base sm:text-lg font-medium leading-6 text-white transition duration-150 ease-in-out bg-teal-accent-700 border border-transparent hover:bg-teal-500 focus:outline-none;"
           >
             Leave feedback
           </button>

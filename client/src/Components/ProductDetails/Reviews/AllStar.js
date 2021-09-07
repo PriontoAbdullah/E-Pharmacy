@@ -4,7 +4,7 @@ import ShowRating from "../../Common/ShowRating";
 
 const AllStar = () => {
   return (
-    <div className="flex flex-col max-w-md p-8 shadow-grayOutline mb-5 rounded-xl lg:p-12">
+    <div className="flex flex-col min-w-full max-w-md p-8 shadow-grayOutline mb-5 rounded-xl lg:p-12">
       <div className="flex flex-col w-full">
         <h2 className="text-2xl mb-4 font-semibold text-center">
           Reviews Overview
@@ -19,32 +19,32 @@ const AllStar = () => {
         <div className="flex flex-col mt-4">
           <div className="flex items-center space-x-1">
             <span className="flex-shrink-0 w-12 text-sm">5 star</span>
-            <div className="w-80">
-              <ProgressBar completed={60} margin={5} bgColor='#FFDF00' labelSize={12}/>
+            <div className="w-full">
+              <ProgressBar completed={60} margin={5} bgColor='#00BFA5' labelSize={12}/>
             </div>
           </div>
           <div className="flex items-center space-x-1">
             <span className="flex-shrink-0 w-12 text-sm">4 star</span>
-            <div className="w-80">
-              <ProgressBar completed={60} margin={5} bgColor='#FFDF00' labelSize={12}/>
+            <div className="w-full">
+              <ProgressBar completed={60} margin={5} bgColor='#00BFA5' labelSize={12}/>
             </div>
           </div>
           <div className="flex items-center space-x-1">
             <span className="flex-shrink-0 w-12 text-sm">3 star</span>
-            <div className="w-80">
-              <ProgressBar completed={60} margin={5} bgColor='#FFDF00' labelSize={12}/>
+            <div className="w-full">
+              <ProgressBar completed={60} margin={5} bgColor='#00BFA5' labelSize={12}/>
             </div>
           </div>
           <div className="flex items-center space-x-1">
             <span className="flex-shrink-0 w-12 text-sm">2 star</span>
-            <div className="w-80">
-              <ProgressBar completed={60} margin={5} bgColor='#FFDF00' labelSize={12}/>
+            <div className="w-full">
+              <ProgressBar completed={60} margin={5} bgColor='#00BFA5' labelSize={12}/>
             </div>
           </div>
           <div className="flex items-center space-x-1">
             <span className="flex-shrink-0 w-12 text-sm">1 star</span>
-            <div className="w-80">
-              <ProgressBar completed={21} margin={5} bgColor='#FFDF00' labelSize={12}/>
+            <div className="w-full">
+              <ProgressBar completed={21} margin={5} bgColor='#00BFA5' labelSize={12}/>
             </div>
           </div>
         </div>
