@@ -1,8 +1,11 @@
-import React from 'react';
-import Hero from '../../Components/Home/Hero/Hero';
-import Header from '../../Components/Home/NavBar/Header';
-import NavBar from '../../Components/Home/NavBar/NavBar';
-import ShopCard from '../../Components/Home/ShopCard/ShopCard';
+import React from "react";
+import Blog from "../../Components/Home/Blog/Blog";
+import Hero from "../../Components/Home/Hero/Hero";
+import Header from "../../Components/Home/NavBar/Header";
+import NavBar from "../../Components/Home/NavBar/NavBar";
+import PictureUpload from "../../Components/Home/PictureUpload/PictureUpload";
+import ShopCard from "../../Components/Home/ShopCard/ShopCard";
+import VendorCTA from "../../Components/Home/VendorCTA/VendorCTA";
 
 const Home = () => {
   return (
@@ -17,9 +20,11 @@ const Home = () => {
         <Header />
         <NavBar />
         <Hero />
-        
       </div>
-      <ShopCard/>
+      <ShopCard />
+      <PictureUpload />
+      <VendorCTA />
+      <Blog />
     </>
   );
 };

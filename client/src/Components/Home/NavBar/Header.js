@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 border-b border-gray-200">
-      <div className="flex items-center justify-between mx-auto max-w-7xl">
+      <div className="flex items-center justify-between mx-auto max-w-7xl font-sans">
         <div className="flex items-center space-x-4">
           <h2 className="text-xs sm:text-sm font-medium text-gray-500 tracking-wider">
             Free delivery for orders over ৳199.{' '}
