@@ -6,7 +6,6 @@ import productsData from "../../Data/products";
 
 const ProductDetails = () => {
   const product = productsData[3]
-  console.log("🚀 ~ file: ProductDetails.js ~ line 9 ~ ProductDetails ~ product", product)
   return (
     <>
       <NavBar />
