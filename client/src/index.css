@@ -7,3 +7,7 @@
 .hero-search-button {
   @apply inline-flex items-center w-32 h-12 justify-center text-base sm:text-lg font-medium tracking-wide leading-6 text-white transition duration-150 ease-in-out bg-teal-accent-700 border border-transparent hover:bg-teal-500 focus:outline-none;
 }
+
+.main-button {
+  @apply inline-flex px-3 items-center h-12 w-40 sm:w-48 justify-center text-base sm:text-lg font-medium  tracking-wide leading-6 text-white transition duration-150 ease-in-out border bg-black border-transparent focus:outline-none;
+}
