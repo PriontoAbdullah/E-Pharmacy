@@ -1,10 +1,12 @@
 import React from 'react';
 import Blog from '../../Components/Home/Blog/Blog';
+import Footer from '../../Components/Home/Footer/Footer';
 import Hero from '../../Components/Home/Hero/Hero';
 import Header from '../../Components/Home/NavBar/Header';
 import NavBar from '../../Components/Home/NavBar/NavBar';
 import PictureUpload from '../../Components/Home/PictureUpload/PictureUpload';
 import ShopCard from '../../Components/Home/ShopCard/ShopCard';
+
 
 const Home = () => {
   return (
@@ -16,13 +18,14 @@ const Home = () => {
           backgroundImage: `url(https://i.ibb.co/9hFrQqt/medicine-home-banner.png)`,
         }}
       >
-        <Header />
-        <NavBar />
+        {/* <Header />
+        <NavBar /> */}
         <Hero />
       </div>
       <ShopCard />
       <PictureUpload />
       <Blog />
+      <Footer />
     </>
   );
 };
