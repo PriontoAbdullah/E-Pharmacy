@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
 import vendorData from '../../../../Data/vendor';
 import Categories from '../../../Categories/Categories';
+import ContactVendor from '../../../ContactVendor/ContactVendor';
 import Products from '../../../Products/Products';
 
 
@@ -20,6 +21,7 @@ const ShopDetails = () => {
         <div class="flex md:flex-row flex-col-reverse mx-auto container px-4 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
             <div class="md:w-3/12 min-h-screen bg-gray-100">
                 <Categories/>
+                <ContactVendor/>
             </div>
 
 
