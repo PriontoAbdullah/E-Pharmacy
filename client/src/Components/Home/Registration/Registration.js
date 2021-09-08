@@ -6,7 +6,7 @@ const Registration = ({setIsAccount}) => {
              <div className="grid w-full grid-cols-3">
         <div className="h-full col-span-1 p-6 bg-bottom bg-cover rounded-none sm:h-full sm:rounded sm:w-auto"
             style={{backgroundImage:` url("https://images.unsplash.com/photo-1584362917165-526a968579e8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNpbmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")`}}>
-            <div className="pt-2 font-serif text-5xl font-bold text-left text-black my-18">Medicine</div>
+            <div style={{wordWrap:"break-word", fontSize:"5vw"}} className="pt-2 font-serif text-5xl font-bold text-left text-black my-18">Medicine</div>
             <div className="text-left text-white-600">Let the Power of Beats flow in you</div>
             <div className="inline-block px-4 py-2 mt-5 text-center text-white bg-blue-600 rounded hover:bg-blue-500">Learn
                 More
@@ -93,7 +93,7 @@ const Registration = ({setIsAccount}) => {
                 </div>
 
                 <div className="flex justify-center mt-1">
-                    <h6 onClick={() => setIsAccount(bool => !bool)} style={{cursor:"pointer"}} className="text-xs font-bold tracking-wide text-gray-700 ">Already have account?</h6>
+                    <h6 onClick={() => setIsAccount(bool => !bool)} style={{cursor:"pointer", color:"#22ACFE", marginTop: "10px"}} className="text-xs font-bold tracking-wide text-gray-700 ">Already have account?</h6>
                 </div>
 
 
