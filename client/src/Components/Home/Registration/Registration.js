@@ -157,22 +157,6 @@ const Registration = ({ setIsAccount }) => {
               </h6>
             </div>
 
-            <div className="flex justify-center mt-6">
-              <button className="px-8 py-2 font-bold text-white rounded-full shadow-lg bg-gradient-to-r from-pink-500 to-orange-500 hover:from-teal-400 hover:to-blue-500">
-                Register
-              </button>
-            </div>
-
-            <div className="flex justify-center mt-1">
-              <h6
-                onClick={() => setIsAccount((bool) => !bool)}
-                style={{ cursor: 'pointer' }}
-                className="text-xs font-bold tracking-wide text-gray-700 "
-              >
-                Already have account?
-              </h6>
-            </div>
-
             <div className="mt-4 flex justify-center inset-x-0.bottom-0">
               <a href="/" className="text-gray-400 hover:text-gray-500">
                 <span className="sr-only">Facebook</span>
