@@ -1,6 +1,7 @@
 import React from 'react';
 import Blog from '../../Components/Home/Blog/Blog';
 import Hero from '../../Components/Home/Hero/Hero';
+import OfferCard from '../../Components/Home/OfferCard/OfferCard';
 import PictureUpload from '../../Components/Home/PictureUpload/PictureUpload';
 import ShopCard from '../../Components/Home/ShopCard/ShopCard';
 import VendorCTA from '../../Components/Home/VendorCTA/VendorCTA';
@@ -17,6 +18,7 @@ const Home = () => {
       >
         <Hero />
       </div>
+      <OfferCard/>
       <ShopCard />
       <PictureUpload />
       <VendorCTA />
