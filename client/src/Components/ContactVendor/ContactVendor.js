@@ -3,7 +3,7 @@ import React from 'react';
 const ContactVendor = () => {
     return (
         <div>
-            <div class="bg-white rounded m-2 shadow-xl z-20 pt-5 pb-12 px-2 mt-10 border-t-2 border-gray-400">
+            <div class="bg-white rounded m-2 shadow-xl z-20 pt-5 pb-6 px-2 mt-10 border-t-2 border-gray-400">
                 <div>
                     <h1 class="text-xl">Contact with Vendor</h1>
                 </div>
