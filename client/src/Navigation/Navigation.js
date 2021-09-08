@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginForm from '../Components/Home/Login/LoginForm';
 import Header from '../Components/Home/NavBar/Header';
 import NavBar from '../Components/Home/NavBar/NavBar';
+import LoginForm from '../Components/Home/Login/LoginForm';
+import Checkout from '../Components/Checkout/Checkout';
 import Home from '../Pages/Home/Home';
 import ProductDetails from '../Pages/ProductDetails/ProductDetails';
 
@@ -25,6 +27,9 @@ const Navigation = () => {
                     </Route>
                     <Route exact path="/registration">
                         <LoginForm/>
+                    </Route>
+                    <Route path="/checkout">
+                        <Checkout></Checkout>
                     </Route>
                     <Route exact path="/product">
                         <ProductDetails/>

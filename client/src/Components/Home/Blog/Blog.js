@@ -36,12 +36,12 @@ const Blog = () => {
                 Travelling Solo Is Awesome
               </a>
               <p className="mb-2 text-gray-700 pb-4">
-              Solo travel gives you a chance to listen to your gut and control what direction you want to head.
+              Solo travel gives you a chance to listen to your gut and control what direction you want to head  gut and control.
               </p>
               <p class="pb-4 text-gray-600 tracking-wide"><small><FontAwesomeIcon icon={ faFolderOpen} />  BLOG, BACKPACK</small></p>
               <a
                 href="#_"
-                class="bg-green-500 p-2 rounded-sm tracking-wide uppercase text-white shadow-lg transition-all border-2 border-green-500 hover:shadow-sm cursor-pointer "
+                class="bg-teal-300 p-2 rounded-sm tracking-wide uppercase text-white shadow-lg transition-all  hover:shadow-sm cursor-pointer "
                 >
                 Read More <FontAwesomeIcon icon={ faArrowRight} />
             </a>
@@ -81,7 +81,7 @@ const Blog = () => {
               <p class="pb-4 text-gray-600 tracking-wide"><small><FontAwesomeIcon icon={ faFolderOpen} />  BLOG, BACKPACK</small></p>
               <a
                 href="#_"
-                class="bg-green-500 p-2 rounded-sm tracking-wide uppercase text-white shadow-lg transition-all border-2 border-green-500 hover:shadow-sm cursor-pointer "
+                class="bg-teal-300 p-2 rounded-sm tracking-wide uppercase text-white shadow-lg transition-all hover:shadow-sm cursor-pointer "
                 >
                 Read More <FontAwesomeIcon icon={ faArrowRight} />
             </a>
@@ -120,7 +120,7 @@ const Blog = () => {
               <p class="pb-4 text-gray-600 tracking-wide"><small><FontAwesomeIcon icon={ faFolderOpen} />  BLOG, BACKPACK</small></p>
               <a
                 href="#_"
-                class="bg-green-500 p-2 rounded-sm tracking-wide uppercase text-white shadow-lg transition-all border-2 border-green-500 hover:shadow-sm cursor-pointer "
+                class="bg-teal-300 p-2 rounded-sm tracking-wide uppercase text-white shadow-lg transition-all  hover:shadow-sm cursor-pointer "
                 >
                 Read More <FontAwesomeIcon icon={ faArrowRight} />
             </a>
