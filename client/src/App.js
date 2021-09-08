@@ -1,14 +1,11 @@
 import './App.css';
-import Navigation from './Navigation/Navigation';
-
-
+import Routes from './Routes';
 
 function App() {
   return (
-    <div>
-      <Navigation/>
-
-    </div>
+    <>
+      <Routes />
+    </>
   );
 }
 
