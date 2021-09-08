@@ -3,7 +3,7 @@ import GoogleLogo from '../../../Assets/images/icons/Google_Logo.svg';
 import Registration from '../Registration/Registration';
 
 const LoginForm = () => {
-  const [isAccount, setIsAccount] = useState(true);
+  const [isAccount, setIsAccount] = useState(false);
 
   return (
     <>
@@ -32,10 +32,7 @@ const LoginForm = () => {
               onClick={() => setIsAccount((bool) => !bool)}
               className="text-sm"
             >
-              or{' '}
-              <a href="#" className="text-blue-500">
-                register a new account
-              </a>
+              or <span className="text-blue-500">register a new account</span>
             </span>
           </div>
           <div className="flex justify-center my-2 mx-4 md:mx-0">
@@ -100,12 +97,12 @@ const LoginForm = () => {
                 </div>
                 <div className="flex items-center w-full mt-2">
                   <div className="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
-                    <button className="appearance-none flex items-center justify-center block w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
+                    <button className="appearance-none flex items-center justify-center w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
                       <img src={GoogleLogo} alt="img" />
                     </button>
                   </div>
                   <div className="w-full md:w-1/3 px-3 pt-4 mx-2">
-                    <button className="appearance-none flex items-center justify-center block w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
+                    <button className="appearance-none flex items-center justify-center w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
                       <svg
                         className="h-6 w-6 fill-current text-gray-700"
                         viewBox="0 0 512 512"
@@ -115,7 +112,7 @@ const LoginForm = () => {
                     </button>
                   </div>
                   <div className="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
-                    <button className="appearance-none flex items-center justify-center block w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
+                    <button className="appearance-none flex items-center justify-center w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
                       <svg
                         className="h-6 w-6 fill-current text-gray-700"
                         viewBox="0 0 512 512"
