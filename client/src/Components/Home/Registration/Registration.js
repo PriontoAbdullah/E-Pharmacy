@@ -10,7 +10,10 @@ const Registration = ({ setIsAccount }) => {
             backgroundImage: ` url("https://images.unsplash.com/photo-1584362917165-526a968579e8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNpbmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")`,
           }}
         >
-          <div className="pt-2 font-serif text-5xl font-bold text-left text-black my-18">
+          <div
+            style={{ wordWrap: 'break-word', fontSize: '5vw' }}
+            className="pt-2 font-serif text-5xl font-bold text-left text-black my-18"
+          >
             Medicine
           </div>
           <div className="text-left text-white-600">
@@ -132,6 +135,26 @@ const Registration = ({ setIsAccount }) => {
                   required
                 />
               </div>
+            </div>
+
+            <div className="flex justify-center mt-6">
+              <button className="px-8 py-2 font-bold text-white rounded-full shadow-lg bg-gradient-to-r from-pink-500 to-orange-500 hover:from-teal-400 hover:to-blue-500">
+                Register
+              </button>
+            </div>
+
+            <div className="flex justify-center mt-1">
+              <h6
+                onClick={() => setIsAccount((bool) => !bool)}
+                style={{
+                  cursor: 'pointer',
+                  color: '#22ACFE',
+                  marginTop: '10px',
+                }}
+                className="text-xs font-bold tracking-wide text-gray-700 "
+              >
+                Already have account?
+              </h6>
             </div>
 
             <div className="flex justify-center mt-6">

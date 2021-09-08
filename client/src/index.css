@@ -15,3 +15,7 @@
 .sidebar-item-active {
   @apply inline-flex items-center px-4 py-2 mt-3 text-base text-teal-700 transition duration-500 ease-in-out transform border-l-4 border-teal-100 bg-teal-100 w-64 focus:outline-none;
 }
+
+.main-button {
+  @apply inline-flex px-3 items-center h-12 w-40 sm:w-48 justify-center text-base sm:text-lg font-medium  tracking-wide leading-6 text-white transition duration-150 ease-in-out border bg-black border-transparent focus:outline-none;
+}
