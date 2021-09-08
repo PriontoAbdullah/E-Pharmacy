@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CompanyLogo = () => {
   return (
     <div>
-      <a
+      <Link to="/"
         href="/"
         aria-label="E-Pharmacy"
         title="E-Pharmacy"
@@ -27,7 +28,7 @@ const CompanyLogo = () => {
         <span className="ml-2 text-xl font-semibold font-display tracking-wide text-teal-400 uppercase">
           E-Pharmacy
         </span>
-      </a>
+      </Link>
     </div>
   );
 };
