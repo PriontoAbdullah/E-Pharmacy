@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,4 +6,12 @@
 
 .hero-search-button {
   @apply inline-flex items-center w-32 h-12 justify-center text-base sm:text-lg font-medium tracking-wide leading-6 text-white transition duration-150 ease-in-out bg-teal-accent-700 border border-transparent hover:bg-teal-500 focus:outline-none;
+}
+
+.sidebar-item {
+  @apply inline-flex items-center px-4 py-2 mt-3 text-base text-teal-50 transition duration-500 ease-in-out transform border-l-4 border-teal-500 hover:border-white focus:outline-none hover:text-white;
+}
+
+.sidebar-item-active {
+  @apply inline-flex items-center px-4 py-2 mt-3 text-base text-teal-700 transition duration-500 ease-in-out transform border-l-4 border-teal-100 bg-teal-100 w-64 focus:outline-none;
 }
