@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "../../Components/ProductDetails/Menu";
+import Menu from "../../Components/ProductDetails/Menu/Menu";
 import ProductInfo from "../../Components/ProductDetails/ProductInfo";
 import productsData from "../../Data/products";
 

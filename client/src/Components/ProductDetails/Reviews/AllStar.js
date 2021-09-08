@@ -1,6 +1,7 @@
-import ProgressBar from "@ramonak/react-progress-bar";
 import React from "react";
 import ShowRating from "../../Common/ShowRating";
+import SingleProgressBar from "../../Common/SingleProgressBar";
+
 
 const AllStar = () => {
   return (
@@ -17,36 +18,11 @@ const AllStar = () => {
         </div>
         <p className="text-sm dark:text-coolGray-400">861 global ratings</p>
         <div className="flex flex-col mt-4">
-          <div className="flex items-center space-x-1">
-            <span className="flex-shrink-0 w-12 text-sm">5 star</span>
-            <div className="w-full">
-              <ProgressBar completed={60} margin={5} bgColor='#00BFA5' labelSize={12}/>
-            </div>
-          </div>
-          <div className="flex items-center space-x-1">
-            <span className="flex-shrink-0 w-12 text-sm">4 star</span>
-            <div className="w-full">
-              <ProgressBar completed={60} margin={5} bgColor='#00BFA5' labelSize={12}/>
-            </div>
-          </div>
-          <div className="flex items-center space-x-1">
-            <span className="flex-shrink-0 w-12 text-sm">3 star</span>
-            <div className="w-full">
-              <ProgressBar completed={60} margin={5} bgColor='#00BFA5' labelSize={12}/>
-            </div>
-          </div>
-          <div className="flex items-center space-x-1">
-            <span className="flex-shrink-0 w-12 text-sm">2 star</span>
-            <div className="w-full">
-              <ProgressBar completed={60} margin={5} bgColor='#00BFA5' labelSize={12}/>
-            </div>
-          </div>
-          <div className="flex items-center space-x-1">
-            <span className="flex-shrink-0 w-12 text-sm">1 star</span>
-            <div className="w-full">
-              <ProgressBar completed={21} margin={5} bgColor='#00BFA5' labelSize={12}/>
-            </div>
-          </div>
+          <SingleProgressBar star={5} completed={70} bgColor="#00BFA5" />
+          <SingleProgressBar star={4} completed={30} bgColor="#00BFA5" />
+          <SingleProgressBar star={3} completed={40} bgColor="#00BFA5" />
+          <SingleProgressBar star={2} completed={20} bgColor="#00BFA5" />
+          <SingleProgressBar star={1} completed={15} bgColor="#00BFA5" />
         </div>
       </div>
     </div>
