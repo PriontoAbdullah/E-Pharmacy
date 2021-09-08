@@ -41,10 +41,10 @@ const Products = () => {
 
               <div class="flex justify-between my-4 items-center">
                 <div>
-                  <button class="hover:bg-teal-800 p-1 rounded-full transition duration-150 ease-in-out mr-2" title="Add to Wishlist">
-                    <svg class="w-5 h-5 hover:text-white transition duration-150 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></button>
-                  <button class="hover:bg-teal-800 p-1 rounded-full transition duration-150 ease-in-out" title="Quick View">
-                    <svg class="w-5 h-5 hover:text-white transition duration-150 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                  <button class="hover:bg-teal-800 hover:text-white p-1 rounded-full transition duration-150 ease-in-out mr-2" title="Add to Wishlist">
+                    <svg class="w-5 h-5  transition duration-150 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></button>
+                  <button class="hover:bg-teal-800 hover:text-white p-1 rounded-full transition duration-150 ease-in-out" title="Quick View">
+                    <svg class="w-5 h-5  transition duration-150 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
 
                   </button>
 
