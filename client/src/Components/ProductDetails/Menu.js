@@ -1,9 +1,9 @@
-import React from "react";
-import { Faq } from "./FAQ";
+import React from 'react';
+import { Faq } from './FAQ';
 import Reviews from './Reviews/Reviews';
-import VendorInfo from "./VendorInfo";
-const Menu = ({product:{description,totalReview}}) => {
+import VendorInfo from './VendorInfo';
 
+const Menu = ({ product: { description, totalReview } }) => {
   const [openTab, setOpenTab] = React.useState(1);
   return (
     <>
@@ -16,10 +16,10 @@ const Menu = ({product:{description,totalReview}}) => {
             <li className="-mb-px  text-center">
               <a
                 className={
-                  "text-md md:text-lg font-bold   py-3 block leading-normal " +
+                  'text-md md:text-lg font-sans font-medium py-3 block leading-normal ' +
                   (openTab === 1
-                    ? "text-black border-b-2 border-cyan-500"
-                    : "text-gray-600 ")
+                    ? 'text-gray-900 border-b-2 border-cyan-500'
+                    : 'text-gray-600 ')
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -35,10 +35,10 @@ const Menu = ({product:{description,totalReview}}) => {
             <li className="-mb-px  text-center">
               <a
                 className={
-                  "text-md md:text-lg font-bold    py-3 block leading-normal " +
+                  'text-md md:text-lg font-sans font-medium py-3 block leading-normal ' +
                   (openTab === 2
-                    ? "text-black border-b-2 border-cyan-500"
-                    : "text-gray-600 ")
+                    ? 'text-gray-900 border-b-2 border-cyan-500'
+                    : 'text-gray-600 ')
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -48,16 +48,16 @@ const Menu = ({product:{description,totalReview}}) => {
                 href="#link2"
                 role="tablist"
               >
-                Reviews ({totalReview?totalReview:0})
+                Reviews ({totalReview ? totalReview : 0})
               </a>
             </li>
             <li className="-mb-px  text-center">
               <a
                 className={
-                  "text-md md:text-lg font-bold  py-3 block leading-normal " +
+                  'text-md md:text-lg font-sans font-medium py-3 block leading-normal ' +
                   (openTab === 3
-                    ? "text-black border-b-2 border-cyan-500"
-                    : "text-gray-600 ")
+                    ? 'text-gray-900 border-b-2 border-cyan-500'
+                    : 'text-gray-600 ')
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -70,13 +70,13 @@ const Menu = ({product:{description,totalReview}}) => {
                 Vendor Info
               </a>
             </li>
-            <li className="-mb-px  text-center">
+            <li className="-mb-px text-center">
               <a
                 className={
-                  "text-md md:text-lg font-bold  py-3 block leading-normal " +
+                  'text-md md:text-lg font-sans font-medium py-3 block leading-normal ' +
                   (openTab === 4
-                    ? "text-black border-b-2 border-cyan-500"
-                    : "text-gray-600 ")
+                    ? 'text-gray-900 border-b-2 border-cyan-500'
+                    : 'text-gray-600 ')
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -90,22 +90,22 @@ const Menu = ({product:{description,totalReview}}) => {
               </a>
             </li>
           </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-accent-200 w-full mb-6  rounded">
+          <div className="relative flex flex-col min-w-0 break-words bg-accent-200 w-full rounded">
             <div className="py-5 flex-auto">
               <div className="tab-content tab-space">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <p className='text-gray-600 font-medium'>
+                <div className={openTab === 1 ? 'block' : 'hidden'} id="link1">
+                  <p className="text-gray-800 font-sans font-normal tracking-wide leading-relaxed">
                     {description}
                   </p>
                 </div>
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <Reviews/>
+                <div className={openTab === 2 ? 'block' : 'hidden'} id="link2">
+                  <Reviews />
                 </div>
-                <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <VendorInfo/>
+                <div className={openTab === 3 ? 'block' : 'hidden'} id="link3">
+                  <VendorInfo />
                 </div>
-                <div className={openTab === 4 ? "block" : "hidden"} id="link3">
-                  <Faq/>
+                <div className={openTab === 4 ? 'block' : 'hidden'} id="link3">
+                  <Faq />
                 </div>
               </div>
             </div>

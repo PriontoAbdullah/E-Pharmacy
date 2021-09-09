@@ -1,48 +1,40 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import VendorLayout from './Components/Admin/Vendor/VendorLayout';
-import Checkout from './Components/Checkout/Checkout';
-import Footer from './Components/Home/Footer/Footer';
-import LoginForm from './Components/Home/Login/LoginForm';
-import Header from './Components/Home/NavBar/Header';
-import NavBar from './Components/Home/NavBar/NavBar';
-import ShopDetails from './Components/Home/ShopCard/ShopDetails/ShopDetails';
+import VenderDashboardPage from './Pages/Admin/Vendor/VenderDashboardPage';
+import LoginPage from './Pages/Authentication/LoginPage';
+import RegistrationPage from './Pages/Authentication/RegistrationPage';
+import CheckoutPage from './Pages/Checkout/CheckoutPage';
 import Home from './Pages/Home/Home';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
+import ShopDetailsPage from './Pages/Shop/ShopDetailsPage';
 
 const Navigation = () => {
   return (
     <div>
       <Router>
-        <Header />
-        <NavBar />
         <Switch>
-          <Route exact path="/home">
-            <Home />
-          </Route>
           <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/login">
-            <LoginForm />
+            <LoginPage />
           </Route>
           <Route exact path="/registration">
-            <LoginForm />
+            <RegistrationPage />
           </Route>
           <Route path="/shopDetails/:vendorId">
-            <ShopDetails />
+            <ShopDetailsPage />
           </Route>
           <Route path="/checkout">
-            <Checkout />
+            <CheckoutPage />
           </Route>
-          <Route exact path="/product">
+          <Route exact path="/productDetails">
             <ProductDetails />
           </Route>
           <Route exact path="/vendor/:panel">
-            <VendorLayout />
+            <VenderDashboardPage />
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

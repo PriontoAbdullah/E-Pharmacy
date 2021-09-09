@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import GoogleLogo from '../../../Assets/images/icons/Google_Logo.svg';
 import Registration from '../Registration/Registration';
+import './Login.css';
 
 const LoginForm = () => {
   const [isAccount, setIsAccount] = useState(false);
@@ -9,121 +9,189 @@ const LoginForm = () => {
     <>
       {!isAccount ? (
         <>
-          <div className="text-center mt-24">
-            <div className="flex items-center justify-center">
-              <svg
-                fill="none"
-                viewBox="0 0 24 24"
-                className="w-12 h-12 text-blue-500"
-                stroke="currentColor"
+          <div class="relative min-h-screen flex ">
+            <div class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
+              <div
+                class="sm:w-1/2 xl:w-3/5 h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative"
+                style={{
+                  backgroundImage:
+                    'url(https://images.unsplash.com/photo-1579451861283-a2239070aaa9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)',
+                }}
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                />
-              </svg>
-            </div>
-            <h2 className="text-4xl tracking-tight">
-              Sign in into your account
-            </h2>
-            <span
-              onClick={() => setIsAccount((bool) => !bool)}
-              className="text-sm"
-            >
-              or <span className="text-blue-500">register a new account</span>
-            </span>
-          </div>
-          <div className="flex justify-center my-2 mx-4 md:mx-0">
-            <form className="w-full max-w-xl bg-white rounded-lg shadow-md p-6">
-              <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full md:w-full px-3 mb-6">
-                  <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    for="Password"
-                  >
-                    Email address
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-white text-gray-900 font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
-                    type="email"
-                    required
-                  />
+                <div class="absolute bg-gradient-to-b from-indigo-600 to-blue-500 opacity-75 inset-0 z-0"></div>
+                <div class="w-full  max-w-md z-10">
+                  <div class="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">
+                    Reference site about Lorem Ipsum..
+                  </div>
+                  <div class="sm:text-sm xl:text-md text-gray-200 font-normal">
+                    {' '}
+                    What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
+                    printing and typesetting industry Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s when an
+                    unknown printer took a galley of type and scrambled it to
+                    make a type specimen book it has?
+                  </div>
                 </div>
-                <div className="w-full md:w-full px-3 mb-6">
-                  <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    for="Password"
-                  >
-                    Password
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-white text-gray-900 font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
-                    type="password"
-                    required
-                  />
-                </div>
-                <div className="w-full flex items-center justify-between px-3 mb-3 ">
-                  <label for="remember" className="flex items-center w-1/2">
-                    <input
-                      type="checkbox"
-                      name=""
-                      id=""
-                      className="mr-1 bg-white shadow"
-                    />
-                    <span className="text-sm text-gray-700 pt-1">
-                      Remember Me
-                    </span>
-                  </label>
-                  <div className="w-1/2 text-right">
+
+                <ul class="circles">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="md:flex md:items-center md:justify-center sm:w-auto md:h-full w-2/5 xl:w-2/5 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
+                <div class="max-w-md w-full space-y-8">
+                  <div class="text-center">
+                    <h2 class="mt-6 text-3xl font-bold text-gray-900">
+                      Welcom Back!
+                    </h2>
+                    <p class="mt-2 text-sm text-gray-500">
+                      Please sign in to your account
+                    </p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center space-x-3">
                     <a
-                      href="#0"
-                      className="text-blue-500 text-sm tracking-tight"
+                      alt=""
+                      href="https://www.behance.net/ajeeshmon"
+                      target="_blank"
+                      class="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg   bg-blue-900 hover:shadow-lg cursor-pointer transition ease-in duration-300"
+                      rel="noreferrer"
                     >
-                      Forget your password?
+                      <img
+                        alt=""
+                        class="w-4 h-4"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0xNS45OTcgMy45ODVoMi4xOTF2LTMuODE2Yy0uMzc4LS4wNTItMS42NzgtLjE2OS0zLjE5Mi0uMTY5LTMuMTU5IDAtNS4zMjMgMS45ODctNS4zMjMgNS42Mzl2My4zNjFoLTMuNDg2djQuMjY2aDMuNDg2djEwLjczNGg0LjI3NHYtMTAuNzMzaDMuMzQ1bC41MzEtNC4yNjZoLTMuODc3di0yLjkzOWMuMDAxLTEuMjMzLjMzMy0yLjA3NyAyLjA1MS0yLjA3N3oiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+"
+                      />
+                    </a>
+                    <a
+                      alt=""
+                      href="https://twitter.com/ajeemon?lang=en"
+                      target="_blank"
+                      class="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg  text-white bg-blue-400 hover:shadow-lg cursor-pointer transition ease-in duration-300"
+                      rel="noreferrer"
+                    >
+                      <img
+                        alt=" "
+                        class="w-4 h-4"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDY4MS4zMzQ2NCA2ODEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTIwMC45NjQ4NDQgNTE1LjI5Mjk2OWMyNDEuMDUwNzgxIDAgMzcyLjg3MTA5NC0xOTkuNzAzMTI1IDM3Mi44NzEwOTQtMzcyLjg3MTA5NCAwLTUuNjcxODc1LS4xMTcxODgtMTEuMzIwMzEzLS4zNzEwOTQtMTYuOTM3NSAyNS41ODU5MzctMTguNSA0Ny44MjQyMTgtNDEuNTg1OTM3IDY1LjM3MTA5NC02Ny44NjMyODEtMjMuNDgwNDY5IDEwLjQ0MTQwNi00OC43NTM5MDcgMTcuNDYwOTM3LTc1LjI1NzgxMyAyMC42MzY3MTggMjcuMDU0Njg3LTE2LjIzMDQ2OCA0Ny44MjgxMjUtNDEuODk0NTMxIDU3LjYyNS03Mi40ODgyODEtMjUuMzIwMzEzIDE1LjAxMTcxOS01My4zNjMyODEgMjUuOTE3OTY5LTgzLjIxNDg0NCAzMS44MDg1OTQtMjMuOTE0MDYyLTI1LjQ3MjY1Ni01Ny45NjQ4NDMtNDEuNDAyMzQ0LTk1LjY2NDA2Mi00MS40MDIzNDQtNzIuMzY3MTg4IDAtMTMxLjA1ODU5NCA1OC42ODc1LTEzMS4wNTg1OTQgMTMxLjAzMTI1IDAgMTAuMjg5MDYzIDEuMTUyMzQ0IDIwLjI4OTA2MyAzLjM5ODQzNyAyOS44ODI4MTMtMTA4LjkxNzk2OC01LjQ4MDQ2OS0yMDUuNTAzOTA2LTU3LjYyNS0yNzAuMTMyODEyLTEzNi45MjE4NzUtMTEuMjUgMTkuMzYzMjgxLTE3Ljc0MjE4OCA0MS44NjMyODEtMTcuNzQyMTg4IDY1Ljg3MTA5MyAwIDQ1LjQ2MDkzOCAyMy4xMzY3MTkgODUuNjA1NDY5IDU4LjMxNjQwNyAxMDkuMDgyMDMyLTIxLjUtLjY2MDE1Ni00MS42OTUzMTMtNi41NjI1LTU5LjM1MTU2My0xNi4zODY3MTktLjAxOTUzMS41NTA3ODEtLjAxOTUzMSAxLjA4NTkzNy0uMDE5NTMxIDEuNjcxODc1IDAgNjMuNDY4NzUgNDUuMTcxODc1IDExNi40NjA5MzggMTA1LjE0NDUzMSAxMjguNDY4NzUtMTEuMDE1NjI1IDIuOTk2MDk0LTIyLjYwNTQ2OCA0LjYwOTM3NS0zNC41NTg1OTQgNC42MDkzNzUtOC40Mjk2ODcgMC0xNi42NDg0MzctLjgyODEyNS0yNC42MzI4MTItMi4zNjMyODEgMTYuNjgzNTk0IDUyLjA3MDMxMiA2NS4wNjY0MDYgODkuOTYwOTM3IDEyMi40MjU3ODEgOTEuMDIzNDM3LTQ0Ljg1NTQ2OSAzNS4xNTYyNS0xMDEuMzU5Mzc1IDU2LjA5NzY1Ny0xNjIuNzY5NTMxIDU2LjA5NzY1Ny0xMC41NjI1IDAtMjEuMDAzOTA2LS42MDU0NjktMzEuMjYxNzE4OC0xLjgxNjQwNyA1Ny45OTk5OTk4IDM3LjE3NTc4MSAxMjYuODcxMDkzOCA1OC44NzEwOTQgMjAwLjg4NjcxODggNTguODcxMDk0IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PC9nPjwvc3ZnPg=="
+                      />
+                    </a>
+                    <a
+                      alt=""
+                      href="https://in.linkedin.com/in/ajeeshmon"
+                      target="_blank"
+                      class="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg  text-white bg-blue-500 hover:shadow-lg cursor-pointer transition ease-in duration-300"
+                      rel="noreferrer"
+                    >
+                      <img
+                        alt=""
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0yMy45OTQgMjR2LS4wMDFoLjAwNnYtOC44MDJjMC00LjMwNi0uOTI3LTcuNjIzLTUuOTYxLTcuNjIzLTIuNDIgMC00LjA0NCAxLjMyOC00LjcwNyAyLjU4N2gtLjA3di0yLjE4NWgtNC43NzN2MTYuMDIzaDQuOTd2LTcuOTM0YzAtMi4wODkuMzk2LTQuMTA5IDIuOTgzLTQuMTA5IDIuNTQ5IDAgMi41ODcgMi4zODQgMi41ODcgNC4yNDN2Ny44MDF6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtLjM5NiA3Ljk3N2g0Ljk3NnYxNi4wMjNoLTQuOTc2eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTIuODgyIDBjLTEuNTkxIDAtMi44ODIgMS4yOTEtMi44ODIgMi44ODJzMS4yOTEgMi45MDkgMi44ODIgMi45MDkgMi44ODItMS4zMTggMi44ODItMi45MDljLS4wMDEtMS41OTEtMS4yOTItMi44ODItMi44ODItMi44ODJ6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PC9nPjwvc3ZnPg=="
+                        class="w-4 h-4"
+                      />
                     </a>
                   </div>
-                </div>
-                <div className="w-full md:w-full px-3 mb-6">
-                  <button className="appearance-none block w-full bg-blue-600 text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-blue-500 focus:outline-none focus:bg-white focus:border-gray-500">
-                    Sign in
-                  </button>
-                </div>
-                <div className="mx-auto -mb-6 pb-1">
-                  <span className="text-center text-xs text-gray-700">
-                    or sign up with
-                  </span>
-                </div>
-                <div className="flex items-center w-full mt-2">
-                  <div className="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
-                    <button className="appearance-none flex items-center justify-center w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
-                      <img src={GoogleLogo} alt="img" />
-                    </button>
+                  <div class="flex items-center justify-center space-x-2">
+                    <span class="h-px w-16 bg-gray-200"></span>
+                    <span class="text-gray-300 font-normal">
+                      or continue with
+                    </span>
+                    <span class="h-px w-16 bg-gray-200"></span>
                   </div>
-                  <div className="w-full md:w-1/3 px-3 pt-4 mx-2">
-                    <button className="appearance-none flex items-center justify-center w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
-                      <svg
-                        className="h-6 w-6 fill-current text-gray-700"
-                        viewBox="0 0 512 512"
+                  <form class="mt-8 space-y-6" action="#" method="POST">
+                    <input type="hidden" name="remember" value="true" />
+                    <div class="relative">
+                      <div class="absolute right-3 mt-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-green-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
+                        Email
+                      </label>
+                      <input
+                        class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                        type=""
+                        placeholder="mail@gmail.com"
+                        value="mail@gmail.com"
+                      />
+                    </div>
+                    <div class="mt-8 content-center">
+                      <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
+                        Password
+                      </label>
+                      <input
+                        class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500"
+                        type=""
+                        placeholder="Enter your password"
+                        value="*****|"
+                      />
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                        <input
+                          id="remember_me"
+                          name="remember_me"
+                          type="checkbox"
+                          class="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded"
+                        />
+                        <label
+                          for="remember_me"
+                          class="ml-2 block text-sm text-gray-900"
+                        >
+                          Remember me
+                        </label>
+                      </div>
+                      <div class="text-sm">
+                        <a
+                          alt=""
+                          href="#0"
+                          class="text-indigo-400 hover:text-blue-500"
+                        >
+                          Forgot your password?
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <button
+                        type="submit"
+                        class="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500"
                       >
-                        <path d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z" />
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
-                    <button className="appearance-none flex items-center justify-center w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
-                      <svg
-                        className="h-6 w-6 fill-current text-gray-700"
-                        viewBox="0 0 512 512"
+                        Sign in
+                      </button>
+                    </div>
+                    <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
+                      <span>Don't have an account?</span>
+                      <a
+                        alt=""
+                        href="#0"
+                        onClick={() => setIsAccount((bool) => !bool)}
+                        class="text-indigo-400 hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300"
                       >
-                        <path d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z" />
-                      </svg>
-                    </button>
-                  </div>
+                        Sign up
+                      </a>
+                    </p>
+                  </form>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </>
       ) : (
