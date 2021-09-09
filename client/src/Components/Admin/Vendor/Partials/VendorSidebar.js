@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import logo from '../../../../Assets/images/logo.png';
 
 const VendorSidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const trigger = useRef(null);
@@ -66,11 +67,7 @@ const VendorSidebar = ({ sidebarOpen, setSidebarOpen }) => {
               href="/"
               className="inline-flex items-center mt-6 mx-auto sm:mx-6"
             >
-              <img
-                src="https://www.kindpng.com/picc/m/90-904149_pharmacy-capsule-logo-clipart-png-download-transparent-png.png"
-                alt="logo"
-                className="object-contain w-10"
-              />
+              <img src={logo} alt="logo" className="object-contain w-10" />
               <span className="ml-2 text-base sm:text-lg font-display font-semibold tracking-wide leading-snug text-teal-50 uppercase">
                 E-Pharmacy
               </span>
