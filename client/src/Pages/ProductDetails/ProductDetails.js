@@ -7,7 +7,7 @@ import ProductInfo from '../../Components/ProductDetails/ProductInfo';
 import productsData from '../../Data/products';
 
 const ProductDetails = () => {
-  const product = productsData[3];
+  const product = productsData[1];
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
