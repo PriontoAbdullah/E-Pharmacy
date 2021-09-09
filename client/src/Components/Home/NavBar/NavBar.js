@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ActionIcons from './ActionIcons';
 import CompanyLogo from './CompanyLogo';
@@ -8,9 +8,30 @@ const NavBar = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const [showFixedNav, setShowFixedNav] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if(window.scrollY > 100){
+        setShowFixedNav(true)
+      }else {
+        setShowFixedNav(false)
+      }
+
+      return () => {
+        window.removeEventListener("scroll")
+      }
+
+
+    });
+
+  }, [])
+
   return (
     <nav
-      className={` ${location.pathname === '/' ? 'bg-gray-50' : 'bg-white'}`}
+      className={` ${location.pathname === '/' ? 'bg-gray-50' : 'bg-white'} 
+      ${showFixedNav && "fixed-nav" }`}
+      
     >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between font-sans">
