@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const ClientReview = () => {
   return (
-    <div className="container flex flex-col w-full p-6 mx-auto divide-y rounded-md divide-coolGray-700 dark:bg-coolGray-900 dark:text-coolGray-100">
-      <div className="flex justify-between p-4">
+    <div className="container flex flex-col w-full px-6 py-4 mx-auto divide-y rounded-md divide-coolGray-700">
+      <div className="flex justify-between p-4 font-sans">
         <div className="flex space-x-4">
           <div>
             <img
@@ -13,12 +13,16 @@ const ClientReview = () => {
             />
           </div>
           <div>
-            <h4 className="font-bold">Leroy Jenkins</h4>
-            <span className="text-xs dark:text-coolGray-400">2 days ago</span>
+            <h4 className="font-display font-semibold text-gray-900">
+              Leroy Jenkins
+            </h4>
+            <span className="text-xs text-gray-800 tracking-wide">
+              2 days ago
+            </span>
           </div>
         </div>
       </div>
-      <div className="p-4 space-y-2 text-sm dark:text-coolGray-400">
+      <div className="p-4 space-y-2 text-sm font-sans text-gray-800 tracking-wide">
         <p>
           Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu dictum
           lectus consequat vitae. Etiam ut dolor id justo fringilla finibus.
