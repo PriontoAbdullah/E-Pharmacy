@@ -24,7 +24,7 @@ const ShopCard = () => {
             <div className="relative pt-2">
               <div className="absolute -mt-12 w-full flex justify-center items-center">
                 <img
-                  className="shadow-3xl rounded-2xl border-2 h-16 w-16"
+                  className="shadow-3xl rounded-2xl border-2 border-gray-400 h-16 w-16"
                   src={shopCard.logo}
                   alt=""
                 />
