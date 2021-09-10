@@ -1,18 +1,16 @@
-import React from "react";
+import React from 'react';
 
 const QuantityButton = () => {
   return (
-    <div class="flex justify-between align-center items-center rounded-full w-32 h-12 r text-base sm:text-lg font-medium md:w-40 tracking-wide leading-6 transition duration-150 ease-in-out  shadow-grayOutline focus:outline-none ">
-
-      <i class="fas fa-plus m-1 py-2 px-4 cursor-pointer"></i>
-
+    <div className="flex justify-between align-center items-center rounded w-32 h-11 r text-base sm:text-lg font-medium tracking-wide leading-6 transition duration-150 ease-in-out border border-teal-400 focus:outline-none ">
+      <i className="fas fa-plus m-1 py-2 px-4 cursor-pointer font-normal text-teal-600"></i>
       <input
-        class="mx-2 text-center w-2 md:w-8 "
+        className="mx-2 text-center w-2 text-gray-900"
         type="text"
         value="1"
       />
 
-      <i class="fas fa-minus m-1 py-2 px-4 cursor-pointer"></i>
+      <i className="fas fa-minus m-1 py-2 px-4 cursor-pointer font-normal text-teal-600"></i>
     </div>
   );
 };

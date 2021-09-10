@@ -10,28 +10,25 @@ const Registration = ({ setIsAccount }) => {
             backgroundImage: ` url("https://images.unsplash.com/photo-1584362917165-526a968579e8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNpbmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")`,
           }}
         >
-          <div
-            style={{ wordWrap: 'break-word', fontSize: '5vw' }}
-            className="pt-2 font-serif text-5xl font-bold text-left text-black my-18"
-          >
+          <div className="pt-2 font-display text-5xl font-semibold text-left text-teal-500 my-18">
             Medicine
           </div>
-          <div className="text-left text-white-600">
+          <div className="text-left text-gray-800 mt-2">
             Let the Power of Beats flow in you
           </div>
-          <div className="inline-block px-4 py-2 mt-5 text-center text-white bg-blue-600 rounded hover:bg-blue-500">
+          <div className="inline-block px-4 py-2 mt-5 text-center text-white bg-teal-500 rounded hover:bg-teal-700 pointer-cursor">
             Learn More
           </div>
         </div>
         <div className="flex items-center justify-center w-full col-span-2">
           <form className="max-w-xl p-4 mx-auto mt-4">
-            <div className="mb-8 font-serif text-5xl font-bold text-center text-black">
+            <div className="mb-8 font-display text-5xl font-semibold text-center text-teal-500">
               Register
             </div>
             <div className="flex flex-wrap mb-6 -mx-3">
               <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                 <label
-                  className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                  className="block mb-2 text-xs font-semibold tracking-wide text-gray-700 uppercase"
                   for="grid-first-name"
                 >
                   First Name
@@ -46,7 +43,7 @@ const Registration = ({ setIsAccount }) => {
               </div>
               <div className="w-full px-3 md:w-1/2">
                 <label
-                  className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                  className="block mb-2 text-xs font-semibold tracking-wide text-gray-700 uppercase"
                   for="grid-last-name"
                 >
                   Last Name
@@ -63,7 +60,7 @@ const Registration = ({ setIsAccount }) => {
             <div className="flex flex-wrap mb-6 -mx-3">
               <div className="w-full px-3">
                 <label
-                  className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                  className="block mb-2 text-xs font-semibold tracking-wide text-gray-700 uppercase"
                   for="grid-password"
                 >
                   Username
@@ -79,7 +76,7 @@ const Registration = ({ setIsAccount }) => {
             <div className="flex flex-wrap mb-6 -mx-3">
               <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                 <label
-                  className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                  className="block mb-2 text-xs font-semibold tracking-wide text-gray-700 uppercase"
                   for="grid-first-name"
                 >
                   Email Address
@@ -93,7 +90,7 @@ const Registration = ({ setIsAccount }) => {
               </div>
               <div className="w-full px-3 md:w-1/2">
                 <label
-                  className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                  className="block mb-2 text-xs font-semibold tracking-wide text-gray-700 uppercase"
                   for="grid-last-name"
                 >
                   Phone Number
@@ -101,7 +98,7 @@ const Registration = ({ setIsAccount }) => {
                 <input
                   className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 border-b-2 border-gray-500 rounded appearance-none hover:border-yellow-500 hover:shadow-xl focus:outline-none focus:bg-white focus:border-gray-500"
                   type="text"
-                  placeholder="+91 XXXXX XXXXX"
+                  placeholder="+88 XXXXX XXXXX"
                   required
                 />
               </div>
@@ -109,7 +106,7 @@ const Registration = ({ setIsAccount }) => {
             <div className="flex flex-wrap mb-6 -mx-3">
               <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                 <label
-                  className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                  className="block mb-2 text-xs font-semibold tracking-wide text-gray-700 uppercase"
                   for="grid-first-name"
                 >
                   Password
@@ -123,7 +120,7 @@ const Registration = ({ setIsAccount }) => {
               </div>
               <div className="w-full px-3 md:w-1/2">
                 <label
-                  className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                  className="block mb-2 text-xs font-semibold tracking-wide text-gray-700 uppercase"
                   for="grid-last-name"
                 >
                   Confirm Password
@@ -138,7 +135,7 @@ const Registration = ({ setIsAccount }) => {
             </div>
 
             <div className="flex justify-center mt-6">
-              <button className="px-8 py-2 font-bold text-white rounded-full shadow-lg bg-gradient-to-r from-pink-500 to-orange-500 hover:from-teal-400 hover:to-blue-500">
+              <button className="px-8 py-2 font-semibold text-white rounded-full shadow-lg bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-400 hover:to-teal-500">
                 Register
               </button>
             </div>
@@ -146,18 +143,13 @@ const Registration = ({ setIsAccount }) => {
             <div className="flex justify-center mt-1">
               <h6
                 onClick={() => setIsAccount((bool) => !bool)}
-                style={{
-                  cursor: 'pointer',
-                  color: '#22ACFE',
-                  marginTop: '10px',
-                }}
-                className="text-xs font-bold tracking-wide text-gray-700 "
+                className="text-lg font-semibold tracking-wide text-teal-500 mt-5"
               >
                 Already have account?
               </h6>
             </div>
 
-            <div className="mt-4 flex justify-center inset-x-0.bottom-0">
+            {/* <div className="mt-4 flex justify-center inset-x-0.bottom-0">
               <a href="/" className="text-gray-400 hover:text-gray-500">
                 <span className="sr-only">Facebook</span>
                 <svg
@@ -309,10 +301,10 @@ const Registration = ({ setIsAccount }) => {
                     style={{ fill: '#03A9F4' }}
                     d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016  c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992  c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056  c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152  c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792  c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44  C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568  C480.224,136.96,497.728,118.496,512,97.248z"
                   />
-                  {/* <g> */}
+                  {/* <g> 
                 </svg>
               </a>
-            </div>
+            </div> */}
           </form>
         </div>
       </div>
