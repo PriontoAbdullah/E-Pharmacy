@@ -21,6 +21,7 @@ const ProductDetails = () => {
           <ProductInfo product={product} />
           <Menu product={product} />
         </div>
+        <Footer/>
       </section>
       <Footer />
     </>

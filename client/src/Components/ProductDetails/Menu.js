@@ -1,5 +1,5 @@
 import React from 'react';
-import { Faq } from './FAQ';
+import { Faq } from './FAQ/FAQItem';
 import Reviews from './Reviews/Reviews';
 import VendorInfo from './VendorInfo';
 
