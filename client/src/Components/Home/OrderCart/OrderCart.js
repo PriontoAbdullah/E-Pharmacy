@@ -38,7 +38,7 @@ const OrderCart = ({ open, setOpen }) => {
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 overflow-hidden"
+          className="fixed inset-0 overflow-hidden z-50"
           onClose={setOpen}
         >
           <div className="absolute inset-0 overflow-hidden">
@@ -119,11 +119,9 @@ const OrderCart = ({ open, setOpen }) => {
                                   <div className="flex-1 flex items-end justify-between text-sm">
                                     <div className="border border-gray-300 rounded">
                                       <i className="fas fa-plus m-1 py-1 px-4 cursor-pointer font-normal text-teal-600"></i>
-                                      <input
-                                        className="mx-2 text-center w-1 text-gray-900"
-                                        type="text"
-                                        value={product.quantity}
-                                      />
+                                      <span className="mx-2 text-center w-1 text-gray-900">
+                                        {product.quantity}
+                                      </span>
 
                                       <i className="fas fa-minus m-1 py-1 px-4 cursor-pointer font-normal text-teal-600"></i>
                                     </div>

@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import EditOrders from './EditOrders';
 
 const AllOrders = () => {
+  const [editModal, setEditModal] = useState(false);
+  const [viewOrder, setViewOrder] = useState();
+
   const orders = [
     {
       id: '0',
@@ -208,7 +212,10 @@ const AllOrders = () => {
                         </span>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <button className="flex align-center justify-center font-body font-semibold text-teal-600 hover:text-teal-900">
+                        <button
+                          className="flex align-center justify-center font-body font-semibold text-teal-600 hover:text-teal-900"
+                          onClick={() => setEditModal(true)}
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6"
@@ -288,6 +295,15 @@ const AllOrders = () => {
           </div>
         </div>
       </div>
+
+      {/* Edit Modal Component */}
+      {editModal ? (
+        <EditOrders
+          setEditModal={setEditModal}
+          viewOrder={viewOrder}
+          orders={orders}
+        />
+      ) : null}
     </section>
   );
 };
