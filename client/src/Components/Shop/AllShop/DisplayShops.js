@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import shopCard from '../../../Data/vendor';
+import allShops from '../../../Data/vendor';
 
-const ShopCard = () => {
-  const first6 = shopCard.slice(0, 6);
-  const [shopCards, setShopCards] = useState(first6);
+const DisplayShops = () => {
+    const [shopCards, setShopCards] = useState(allShops);
 
-  return (
-    <div className="pb-10 pt-8 bg-teal-50">
+    return (
+        <div className="pb-10 pt-8 bg-gray-50">
       {/* Shop Card */}
       <div className="w-full text-center py-8">
         <h1 className="font-medium text-4xl font-display tracking-wide text-teal-700">
-          Your Nearest Medicine Store
+          All Registered Medicine Stores
         </h1>
         <p className="font-sans text-base tracking-wide text-gray-700 mt-2">
           Search for Medicine, Filter by your location
@@ -100,32 +99,8 @@ const ShopCard = () => {
           </div>
         ))}
       </div>
-
-      {/* More button */}
-      <div className="text-center mt-8">
-        <Link
-          to="/allShop"
-          className="inline-flex items-center justify-center h-12 px-6 font-sans font-medium tracking-wider transition duration-200 rounded shadow-md bg-teal-400 text-white hover:bg-teal-700 focus:shadow-outline focus:outline-none"
-        >
-          See More{' '}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 ml-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {/* <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-            /> */}
-          </svg>
-        </Link>
-      </div>
     </div>
-  );
+    );
 };
 
-export default ShopCard;
+export default DisplayShops;
