@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Checkout = () => {
   return (
@@ -408,7 +409,7 @@ const Checkout = () => {
                   </div>
                 </div>
                 <a href="#0">
-                  <button className="flex justify-center w-full px-10 py-3 mt-6 font-medium text-white uppercase bg-teal-500 rounded-full shadow item-center hover:bg-teal-700 focus:shadow-outline focus:outline-none">
+                  <Link to="/orderHistory" className="flex justify-center w-full px-10 py-3 mt-6 font-medium text-white uppercase bg-teal-500 rounded-full shadow item-center hover:bg-teal-700 focus:shadow-outline focus:outline-none">
                     <svg
                       aria-hidden="true"
                       data-prefix="far"
@@ -423,7 +424,7 @@ const Checkout = () => {
                       />
                     </svg>
                     <span className="ml-2 pt-1">Place Order</span>
-                  </button>
+                  </Link>
                 </a>
               </div>
             </div>
