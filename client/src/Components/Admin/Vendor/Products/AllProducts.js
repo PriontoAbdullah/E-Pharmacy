@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AddNewProducts from './AddNewProducts';
 
-const Allstock = () => {
+const AllProducts = () => {
+  const [editModal, setEditModal] = useState(false);
+  const [viewProduct, setViewProduct] = useState();
+
   const orders = [
     {
       id: '0',
@@ -56,7 +60,7 @@ const Allstock = () => {
           <div className="flex-start">
             <button
               className="flex-shrink-0 px-4 py-2 text-base font-medium tracking-wide text-white bg-teal-500 rounded-lg shadow-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-teal-200"
-              type="submit"
+              onClick={() => setEditModal(true)}
             >
               Add a new Product
             </button>
@@ -177,7 +181,10 @@ const Allstock = () => {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm ">
                         <div className="flex align-center justify-center">
-                          <button className="flex align-center justify-center font-body font-semibold text-yellow-900 hover:text-orange-900">
+                          <button
+                            className="flex align-center justify-center font-body font-semibold text-yellow-900 hover:text-orange-900"
+                            onClick={() => setEditModal(true)}
+                          >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               className="h-6 w-6"
@@ -275,8 +282,13 @@ const Allstock = () => {
           </div>
         </div>
       </div>
+
+      {/* Edit Modal Component */}
+      {editModal ? (
+        <AddNewProducts setEditModal={setEditModal} viewProduct={viewProduct} />
+      ) : null}
     </section>
   );
 };
 
-export default Allstock;
+export default AllProducts;
