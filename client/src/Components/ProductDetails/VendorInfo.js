@@ -3,7 +3,7 @@ import vendorData from '../../Data/vendor';
 import ShowRating from '../Common/ShowRating';
 
 const VendorInfo = () => {
-  const vendor = vendorData[7];
+  const vendor = vendorData[1];
   return (
     <div className="text-gray-800 text-md font-sans font-medium tracking-wide flex flex-col gap-1">
       <h3>Store Name: {vendor.shopName}</h3>
