@@ -1,8 +1,10 @@
 import React from 'react';
 import Categories from '../../Categories/Categories';
 import ContactVendor from '../../ContactVendor/ContactVendor';
+import OfferCard from '../../Home/OfferCard/OfferCard';
 import Products from '../../Products/Products';
 import ShopBanner from './ShopBanner';
+import ShopPromotion from './ShopPromotion';
 
 const ShopDetails = () => {
   return (
@@ -18,6 +20,7 @@ const ShopDetails = () => {
         </div>
 
         <div className="md:w-9/12 order-last">
+          <ShopPromotion/>
           {/* Products */}
           <Products />
         </div>

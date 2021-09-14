@@ -35,9 +35,6 @@ const Navigation = () => {
                     <Route exact path="/product">
                         <ProductDetails/>
                     </Route>
-                    {/* <Route  path="/allShop">
-                        <AllShop></AllShop>
-                    </Route> */}
                 </Switch>
             </Router>
         </div>
