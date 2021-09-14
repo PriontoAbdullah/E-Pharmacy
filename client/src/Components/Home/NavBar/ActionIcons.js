@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import OrderCart from '../OrderCart/OrderCart';
+import WishList from '../WishList/WishList';
 
 const ActionIcons = () => {
   const [open, setOpen] = useState(false);
@@ -45,6 +46,7 @@ const ActionIcons = () => {
       </Link>
       <li>
         <button
+        onClick={() => setOpen(true)}
           className="py-4 relative border-2 border-transparent text-gray-700 rounded-full hover:text-teal-accent-700 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
           aria-label="Favorite"
         >
@@ -99,6 +101,7 @@ const ActionIcons = () => {
 
       {/* Open cart modal */}
       <OrderCart open={open} setOpen={setOpen} />
+      <WishList open={open} setOpen={setOpen}></WishList>
     </>
   );
 };
