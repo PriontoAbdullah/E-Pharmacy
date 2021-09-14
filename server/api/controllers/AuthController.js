@@ -2,32 +2,15 @@ const authController = {};
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/UserModel');
-// eslint-disable-next-line no-useless-escape
-const reg_exp_for_email =
-  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const {sineUpValidation} = require('../validations/AuthValidation');
+
 
 authController.sineUp = async (req, res) => {
   try {
-    const { name, email, password, confirm_password } = req.body;
+    const { name, email, password } = req.body;
 
-    if (!name || !email || !password || !confirm_password) {
-      return res.status(400).json({ message: 'Not all field have been entered' });
-    }
-    if (!reg_exp_for_email.test(String(email).toLowerCase())) {
-      return res.status(400).json({ message: 'please enter a valid email address' });
-    }
-    if (password.length < 6) {
-      return res.status(400).json({
-        message: 'The password need to be at least 6 characters long.',
-      });
-    }
-    if (password !== confirm_password) {
-      return res.status(400).json({ message: 'Enter the save password twice for verification.' });
-    }
-    const existingUser = await User.findOne({ email }, { email: 1 });
-    if (existingUser) {
-      return res.status(400).json({ message: 'An account with this email already exists' });
-    }
+    sineUpValidation(req,res)
+    
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
 
@@ -62,17 +45,8 @@ authController.login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    if (!email || !password) {
-      return res.status(400).json({ message: 'Not all field have been entered' });
-    }
-    if (!reg_exp_for_email.test(String(email).toLowerCase())) {
-      return res.status(400).json({ message: 'please enter a valid email address' });
-    }
-    if (password.length < 6) {
-      return res.status(400).json({
-        message: 'The password need to be at least 6 characters long.',
-      });
-    }
+    sineUpValidation(req,res);
+
     const user = await User.findOne({ email });
     console.log('🚀 ~ file: AuthController.js ~ line 79 ~ authController.login= ~ user', user);
     if (!user) {
