@@ -99,7 +99,7 @@ const ShopCard = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> 
 
       {/* More button */}
       <div className="text-center mt-8">
