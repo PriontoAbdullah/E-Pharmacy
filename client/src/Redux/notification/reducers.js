@@ -1,16 +1,14 @@
-import Notification from 'rc-notification';
+import { notification } from "antd";
 import { SHOW_NOTIFICATION } from './actions';
 
 const notificationState = {}
-const key = 'updatable'
 
 export default function notificationReducer(state = notificationState, action) {
   switch (action.type) {
     case SHOW_NOTIFICATION:
-      Notification.newInstance({}, notification => {
-        notification.notice({
-          content: 'content'
-        });
+      notification[action.payload.massageType]({
+        message: action.payload.massage,
+        description: action.payload.description,
       });
       return state
 

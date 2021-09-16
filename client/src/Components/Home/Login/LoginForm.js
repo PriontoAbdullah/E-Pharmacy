@@ -1,10 +1,71 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { loginAccount } from '../../../Redux/user/actions';
+import FormValidation from '../../../Validation/FormValidation';
 import Registration from '../Registration/Registration';
 import './Login.css';
 
 const LoginForm = () => {
   const [isAccount, setIsAccount] = useState(false);
+  const dispatch = useDispatch();
 
+  const [formData, setFormData] = useState({});
+  const [errorData, setErrorData] = useState({});
+
+  const handelBlur = (e) => {
+    //checking input value
+    // const newErrorValue = FormValidation(e.target.name, e.target.value);
+    // setErrorData((errorData) => ({ ...errorData, ...newErrorValue }));
+
+    //setting input value in state
+    setFormData((formData) => ({
+      ...formData,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const recheckUserInput = () => {
+    // checking input value on submit
+    let newErrorObj = {};
+    for (const key in formData) {
+      const value = formData[key];
+      const errorValue = FormValidation(key, value);
+      newErrorObj = { ...newErrorObj, ...errorValue };
+    }
+    setErrorData(newErrorObj);
+  };
+
+  const login = (e) => {
+    e.preventDefault();
+    // recheckUserInput();
+    dispatch(loginAccount(formData));
+    const { email, password } =
+      formData;
+    // if (
+    //   !fastName ||
+    //   !lastName ||
+    //   !userName ||
+    //   !phone ||
+    //   !email ||
+    //   !password ||
+    //   !cmPassword
+    // ) {
+    //   return openNotification("error", "All input value not given");
+    // }
+
+    // if (
+    //   !errorData.fastName &&
+    //   !errorData.lastName &&
+    //   !errorData.userName &&
+    //   !errorData.phone &&
+    //   !errorData.email &&
+    //   !errorData.password &&
+    //   !errorData.cmPassword
+    // ) {
+    //   console.log(formData);
+    //   openNotification("success", "User Sign Up Successful");
+    // }
+  };
   return (
     <>
       {!isAccount ? (
@@ -130,6 +191,8 @@ const LoginForm = () => {
                         className=" w-full text-base px-4 py-2 border-b border-gray-300 placeholder-gray-600 focus:outline-none rounded-2xl focus:border-teal-500"
                         type="email"
                         placeholder="mail@gmail.com"
+                        name="email"
+                        onBlur={(e)=>handelBlur(e)}
                       />
                     </div>
                     <div className="mt-8 content-center">
@@ -140,6 +203,8 @@ const LoginForm = () => {
                         className="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 placeholder-gray-600 focus:outline-none focus:border-teal-500"
                         type="password"
                         placeholder="Enter your password"
+                        name="password"
+                        onBlur={(e)=>handelBlur(e)}
                       />
                     </div>
                     <div className="flex items-center justify-between">
@@ -169,6 +234,7 @@ const LoginForm = () => {
                     </div>
                     <div>
                       <button
+                        onClick={(e)=>login(e)}
                         type="submit"
                         className="w-full flex justify-center bg-gradient-to-r from-teal-500 to-teal-600  hover:bg-gradient-to-l hover:from-teal-600 hover:to-teal-500 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500"
                       >

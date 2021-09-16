@@ -1,4 +1,4 @@
-import User from "../models/UserModel";
+const User = require("../models/UserModel");
 
 const authValidation = {};
 
@@ -7,9 +7,9 @@ const reg_exp_for_email =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 authValidation.signUpValidation = async (req, res) => {
-  const { name, email, password, confirm_password } = req.body;
+  const { fastName, lastName, userName, email, phone,  password, cmPassword  } = req.body;
 
-  if (!name || !email || !password || !confirm_password) {
+  if (!fastName || !lastName || !userName || !email || !phone || !password || !cmPassword) {
     return res.status(400).json({ message: "Not all field have been entered" });
   }
   if (!reg_exp_for_email.test(String(email).toLowerCase())) {
@@ -22,7 +22,7 @@ authValidation.signUpValidation = async (req, res) => {
       message: "The password need to be at least 6 characters long.",
     });
   }
-  if (password !== confirm_password) {
+  if (password !== cmPassword) {
     return res
       .status(400)
       .json({ message: "Enter the save password twice for verification." });
@@ -35,7 +35,7 @@ authValidation.signUpValidation = async (req, res) => {
   }
 };
 
-authValidation.sineUpValidation = async (req, res) => {
+authValidation.loginValidation = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
@@ -52,4 +52,4 @@ authValidation.sineUpValidation = async (req, res) => {
     });
   }
 };
-export default authValidation;
+module.exports = authValidation;
