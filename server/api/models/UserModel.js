@@ -4,7 +4,15 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema(
   {
-    name: {
+    fastName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    userName: {
       type: String,
       required: true,
     },
@@ -14,14 +22,14 @@ const userSchema = new Schema(
       unique: true,
       lowercase: true,
     },
+    phone: {
+      type: Number,
+      required: true,
+    },
     password: {
       type: String,
       required: true,
       min: 6,
-    },
-    isAdmin: {
-      type: Boolean,
-      default: false,
     },
   },
   { timestamps: true },

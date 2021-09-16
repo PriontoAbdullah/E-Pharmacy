@@ -1,28 +1,31 @@
 const authController = {};
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const User = require('../models/UserModel');
-const {sineUpValidation} = require('../validations/AuthValidation');
-
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const User = require("../models/UserModel");
+const { signUpValidation,loginValidation } = require("../validations/AuthValidation");
 
 authController.sineUp = async (req, res) => {
+  console.log('----------------------request');
   try {
-    const { name, email, password } = req.body;
+    const { fastName, lastName, userName, email, phone, password } = req.body;
 
-    sineUpValidation(req,res)
-    
+    signUpValidation(req, res);
+
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
 
     const newUser = new User({
-      name,
+      fastName,
+      lastName,
+      userName,
       email,
+      phone,
       password: hashPassword,
     });
 
     const saveUser = await newUser.save();
     console.log(
-      '🚀 ~ file: AuthController.js ~ line 43 ~ authController.sineUp= ~ saveUser',
+      "🚀 ~ file: AuthController.js ~ line 43 ~ authController.sineUp= ~ saveUser",
       saveUser
     );
 
@@ -30,10 +33,12 @@ authController.sineUp = async (req, res) => {
     return res.send({
       token,
       userInfo: {
-        id: saveUser._id,
-        name: saveUser.name,
+        _id: saveUser._id,
+        fastName: saveUser.fastName,
+        lastName: saveUser.lastName,
+        userName: saveUser.userName,
         email: saveUser.email,
-        isAdmin: saveUser.isAdmin,
+        phone: saveUser.phone,
       },
     });
   } catch (error) {
@@ -45,26 +50,30 @@ authController.login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    sineUpValidation(req,res);
+    loginValidation(req, res);
 
     const user = await User.findOne({ email });
-    console.log('🚀 ~ file: AuthController.js ~ line 79 ~ authController.login= ~ user', user);
+
     if (!user) {
-      return res.status(400).json({ message: 'No account with this email has been registers' });
+      return res
+        .status(400)
+        .json({ message: "No account with this email has been registers" });
     }
     const matchPassword = await bcrypt.compare(password, user.password);
     if (!matchPassword) {
-      return res.status(400).json({ message: 'password incerate' });
+      return res.status(400).json({ message: "password incerate" });
     }
     // eslint-disable-next-line no-underscore-dangle
     const token = jwt.sign({ id: user._id }, process.env.JWT_PASSWORD);
     return res.send({
       token,
       userInfo: {
-        id: user._id,
-        name: user.name,
+        _id: user._id,
+        fastName: user.fastName,
+        lastName: user.lastName,
+        userName: user.userName,
         email: user.email,
-        isAdmin: user.isAdmin,
+        phone: user.phone,
       },
     });
   } catch (error) {
@@ -82,7 +91,7 @@ authController.makeAdmin = async (req, res) => {
       { isAdmin: true },
       {
         new: true,
-      },
+      }
     );
 
     return res.send(updated);

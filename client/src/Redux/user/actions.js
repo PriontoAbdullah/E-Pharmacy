@@ -17,6 +17,7 @@ export const createAccount = (formData, history) => async (dispatch) => {
     );
     // history.push("/");
   } catch (error) {
+    console.log(error?.message);
     dispatch(
       showNotification({
         message: error?.response?.data?.message,
