@@ -6,7 +6,7 @@ const allVendorData = [
         banner: 'http://dummyimage.com/100x100.png/dddddd/000000',
         cardBanner: require('../Assets/images/vendorCardBanner/Image-1.jpg')
           .default,
-        rating: 2,
+        rating: 3,
         totalReview: 22,
         city: 'Seoul',
         location: 'Albenia',
